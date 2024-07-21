@@ -5,10 +5,14 @@ github.com/OsipyanG/market/protos/auth v0.0.0-20240720135821-9c345b9178df h1:WXZ
 github.com/OsipyanG/market/protos/auth v0.0.0-20240720135821-9c345b9178df/go.mod h1:jhtTxFXwPOfqCX34UVxSv9fVws2nmwY8mPrhqmO+kzA=
 github.com/OsipyanG/market/protos/auth v0.0.0-20240720141537-df0ecea47e26 h1:Vg4AJW+vZCC7ra6fuYeei3C56u+EXMx0aOJa1alCHJ8=
 github.com/OsipyanG/market/protos/auth v0.0.0-20240720141537-df0ecea47e26/go.mod h1:jhtTxFXwPOfqCX34UVxSv9fVws2nmwY8mPrhqmO+kzA=
+github.com/OsipyanG/market/protos/auth v0.0.0-20240721104839-873d3a820020 h1:OH9eftX/8RIzHMuh3zCy2rwLYegZZugSLM9aNCWkYAA=
+github.com/OsipyanG/market/protos/auth v0.0.0-20240721104839-873d3a820020/go.mod h1:jhtTxFXwPOfqCX34UVxSv9fVws2nmwY8mPrhqmO+kzA=
 github.com/OsipyanG/market/protos/jwt v0.0.0-20240720135821-9c345b9178df h1:GyfOXCybG/6oQjHP0RKO/n8HnE8qugL8KO8+BirlHd4=
 github.com/OsipyanG/market/protos/jwt v0.0.0-20240720135821-9c345b9178df/go.mod h1:7OJp8KISUc4U5R/+Fs/8ebsYBxVF7yZ2SUHcj+NXuxg=
 github.com/OsipyanG/market/protos/jwt v0.0.0-20240720141537-df0ecea47e26 h1:vJNR4e/b60ahDMW5AGj3Ud4ljEqK50Z30CE2AhbX8wI=
 github.com/OsipyanG/market/protos/jwt v0.0.0-20240720141537-df0ecea47e26/go.mod h1:7OJp8KISUc4U5R/+Fs/8ebsYBxVF7yZ2SUHcj+NXuxg=
+github.com/OsipyanG/market/protos/jwt v0.0.0-20240721104839-873d3a820020 h1:bLf7nHpCO0whIpFDNmYNzjzH5tiTxmxGueVXZS2oq8Q=
+github.com/OsipyanG/market/protos/jwt v0.0.0-20240721104839-873d3a820020/go.mod h1:7OJp8KISUc4U5R/+Fs/8ebsYBxVF7yZ2SUHcj+NXuxg=
 github.com/bradfitz/gomemcache v0.0.0-20230905024940-24af94b03874 h1:N7oVaKyGp8bttX0bfZGmcGkjz7DLQXhAn3DNd3T0ous=
 github.com/bradfitz/gomemcache v0.0.0-20230905024940-24af94b03874/go.mod h1:r5xuitiExdLAJ09PR7vBVENGvp4ZuTBeWTGtxuX3K+c=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=

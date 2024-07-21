@@ -3,11 +3,11 @@ module github.com/OsipyanG/market/services/gateway-msv
 go 1.22.5
 
 require (
-	github.com/OsipyanG/market/protos/auth v0.0.0-20240720141537-df0ecea47e26
-	github.com/OsipyanG/market/protos/jwt v0.0.0-20240720141537-df0ecea47e26
-	github.com/OsipyanG/market/protos/order v0.0.0-20240720141537-df0ecea47e26
-	github.com/OsipyanG/market/protos/shopcart v0.0.0-20240720141537-df0ecea47e26
-	github.com/OsipyanG/market/protos/warehouse v0.0.0-20240720141537-df0ecea47e26
+	github.com/OsipyanG/market/protos/auth v0.0.0-20240721104839-873d3a820020
+	github.com/OsipyanG/market/protos/jwt v0.0.0-20240721104839-873d3a820020
+	github.com/OsipyanG/market/protos/order v0.0.0-20240721143144-8a53976b12a9
+	github.com/OsipyanG/market/protos/shopcart v0.0.0-20240721104839-873d3a820020
+	github.com/OsipyanG/market/protos/warehouse v0.0.0-20240721143144-8a53976b12a9
 	github.com/gin-gonic/gin v1.10.0
 	github.com/ilyakaznacheev/cleanenv v1.5.0
 	google.golang.org/grpc v1.65.0

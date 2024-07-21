@@ -1,5 +1,7 @@
 github.com/OsipyanG/market/protos/jwt v0.0.0-20240720131128-a90633e82404 h1:DAQ0u9Iyd2HbCBt4cJvJDXYb1iqtb6yjvdUugAx0aec=
 github.com/OsipyanG/market/protos/jwt v0.0.0-20240720131128-a90633e82404/go.mod h1:7OJp8KISUc4U5R/+Fs/8ebsYBxVF7yZ2SUHcj+NXuxg=
+github.com/OsipyanG/market/protos/jwt v0.0.0-20240721104839-873d3a820020 h1:bLf7nHpCO0whIpFDNmYNzjzH5tiTxmxGueVXZS2oq8Q=
+github.com/OsipyanG/market/protos/jwt v0.0.0-20240721104839-873d3a820020/go.mod h1:7OJp8KISUc4U5R/+Fs/8ebsYBxVF7yZ2SUHcj+NXuxg=
 github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
 github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
 golang.org/x/net v0.27.0 h1:5K3Njcw06/l2y9vpGCSdcxWOYHOUk3dVNGDXN+FvAys=

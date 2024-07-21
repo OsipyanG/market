@@ -3,8 +3,8 @@ module github.com/OsipyanG/market/services/shopcart-msv
 go 1.22.5
 
 require (
-	github.com/OsipyanG/market/protos/jwt v0.0.0-20240720140422-94def2396c08
-	github.com/OsipyanG/market/protos/shopcart v0.0.0-20240720140422-94def2396c08
+	github.com/OsipyanG/market/protos/jwt v0.0.0-20240721104839-873d3a820020
+	github.com/OsipyanG/market/protos/shopcart v0.0.0-20240721104839-873d3a820020
 	github.com/golang/protobuf v1.5.4
 	github.com/google/uuid v1.6.0
 	github.com/ilyakaznacheev/cleanenv v1.5.0

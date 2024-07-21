@@ -3,7 +3,7 @@ module github.com/OsipyanG/market/services/auth-msv
 go 1.22.5
 
 require (
-	github.com/OsipyanG/market/protos/auth v0.0.0-20240720141537-df0ecea47e26
+	github.com/OsipyanG/market/protos/auth v0.0.0-20240721104839-873d3a820020
 	github.com/ilyakaznacheev/cleanenv v1.5.0
 	github.com/jackc/pgx/v5 v5.6.0
 )
@@ -24,7 +24,7 @@ require (
 
 require (
 	github.com/BurntSushi/toml v1.4.0 // indirect
-	github.com/OsipyanG/market/protos/jwt v0.0.0-20240720141537-df0ecea47e26
+	github.com/OsipyanG/market/protos/jwt v0.0.0-20240721104839-873d3a820020
 	github.com/bradfitz/gomemcache v0.0.0-20230905024940-24af94b03874
 	github.com/golang-jwt/jwt/v5 v5.2.1
 	github.com/golang/protobuf v1.5.4

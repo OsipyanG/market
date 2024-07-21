@@ -5,6 +5,8 @@ github.com/OsipyanG/market/protos/warehouse v0.0.0-20240720135821-9c345b9178df h
 github.com/OsipyanG/market/protos/warehouse v0.0.0-20240720135821-9c345b9178df/go.mod h1:pydkFp0xE76LCoYfIdt8hBF1KRoUg8P8a+5UGcg8POw=
 github.com/OsipyanG/market/protos/warehouse v0.0.0-20240720141537-df0ecea47e26 h1:d3GSZxXW2j1wajmSFN50RK7wkmlsyc5P8TRg2d3c09E=
 github.com/OsipyanG/market/protos/warehouse v0.0.0-20240720141537-df0ecea47e26/go.mod h1:pydkFp0xE76LCoYfIdt8hBF1KRoUg8P8a+5UGcg8POw=
+github.com/OsipyanG/market/protos/warehouse v0.0.0-20240721143144-8a53976b12a9 h1:mnNVn2RvFcFSbyOJ4SvDqgQTo/P6A1jonUI0nemGaZ8=
+github.com/OsipyanG/market/protos/warehouse v0.0.0-20240721143144-8a53976b12a9/go.mod h1:pydkFp0xE76LCoYfIdt8hBF1KRoUg8P8a+5UGcg8POw=
 github.com/cockroachdb/apd v1.1.0 h1:3LFP3629v+1aKXU5Q37mxmRxX/pIu1nijXydLShEq5I=
 github.com/cockroachdb/apd v1.1.0/go.mod h1:8Sl8LxpKi29FqWXR16WEFZRNSz3SoPzUzeMeY4+DwBQ=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=

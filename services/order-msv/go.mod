@@ -3,10 +3,10 @@ module github.com/OsipyanG/market/services/order-msv
 go 1.22.5
 
 require (
-	github.com/OsipyanG/market/protos/jwt v0.0.0-20240720185846-80aa09ad290c
-	github.com/OsipyanG/market/protos/order v0.0.0-20240720185846-80aa09ad290c
-	github.com/OsipyanG/market/protos/shopcart v0.0.0-20240720185846-80aa09ad290c
-	github.com/OsipyanG/market/protos/warehouse v0.0.0-20240720185846-80aa09ad290c
+	github.com/OsipyanG/market/protos/jwt v0.0.0-20240721104839-873d3a820020
+	github.com/OsipyanG/market/protos/order v0.0.0-20240721143144-8a53976b12a9
+	github.com/OsipyanG/market/protos/shopcart v0.0.0-20240721104839-873d3a820020
+	github.com/OsipyanG/market/protos/warehouse v0.0.0-20240721143144-8a53976b12a9
 	github.com/google/uuid v1.6.0
 	github.com/ilyakaznacheev/cleanenv v1.5.0
 	github.com/jackc/pgx/v5 v5.6.0

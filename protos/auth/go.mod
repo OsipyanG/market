@@ -3,7 +3,7 @@ module github.com/OsipyanG/market/protos/auth
 go 1.22.5
 
 require (
-	github.com/OsipyanG/market/protos/jwt v0.0.0-20240720131128-a90633e82404
+	github.com/OsipyanG/market/protos/jwt v0.0.0-20240721104839-873d3a820020
 	google.golang.org/grpc v1.65.0
 	google.golang.org/protobuf v1.34.2
 )

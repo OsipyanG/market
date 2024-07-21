@@ -3,7 +3,7 @@ module github.com/OsipyanG/market/services/warehouse-msv
 go 1.22.5
 
 require (
-	github.com/OsipyanG/market/protos/warehouse v0.0.0-20240720141537-df0ecea47e26
+	github.com/OsipyanG/market/protos/warehouse v0.0.0-20240721143144-8a53976b12a9
 	github.com/golang/protobuf v1.5.4
 	github.com/google/uuid v1.6.0
 	github.com/ilyakaznacheev/cleanenv v1.5.0

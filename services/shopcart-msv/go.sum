@@ -4,8 +4,12 @@ github.com/BurntSushi/toml v1.4.0 h1:kuoIxZQy2WRRk1pttg9asf+WVv6tWQuBNVmK8+nqPr0
 github.com/BurntSushi/toml v1.4.0/go.mod h1:ukJfTF/6rtPPRCnwkur4qwRxa8vTRFBF0uk2lLoLwho=
 github.com/OsipyanG/market/protos/jwt v0.0.0-20240720140422-94def2396c08 h1:xdN9K4uGfkDI2j/2tCg1HoOU1C0qWh4mMPvF8bBV13M=
 github.com/OsipyanG/market/protos/jwt v0.0.0-20240720140422-94def2396c08/go.mod h1:7OJp8KISUc4U5R/+Fs/8ebsYBxVF7yZ2SUHcj+NXuxg=
+github.com/OsipyanG/market/protos/jwt v0.0.0-20240721104839-873d3a820020 h1:bLf7nHpCO0whIpFDNmYNzjzH5tiTxmxGueVXZS2oq8Q=
+github.com/OsipyanG/market/protos/jwt v0.0.0-20240721104839-873d3a820020/go.mod h1:7OJp8KISUc4U5R/+Fs/8ebsYBxVF7yZ2SUHcj+NXuxg=
 github.com/OsipyanG/market/protos/shopcart v0.0.0-20240720140422-94def2396c08 h1:jCLOzgsc1hh5iCxeAqzZaP8zzEl+rSZyDVQX8b2J93c=
 github.com/OsipyanG/market/protos/shopcart v0.0.0-20240720140422-94def2396c08/go.mod h1:eMS6VI1UrcGTahiH5kdSQC2UufDie2JD+GyfaLk2Ays=
+github.com/OsipyanG/market/protos/shopcart v0.0.0-20240721104839-873d3a820020 h1:SuyMIYym/DtiCo3I6L4ajWU4uErC852xFuR4TtBXZv8=
+github.com/OsipyanG/market/protos/shopcart v0.0.0-20240721104839-873d3a820020/go.mod h1:eMS6VI1UrcGTahiH5kdSQC2UufDie2JD+GyfaLk2Ays=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
