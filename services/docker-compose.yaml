@@ -1,0 +1,98 @@
+services:
+  db:
+    image: postgres:16.0
+    container_name: db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data
+      - ./db/init/:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+    networks:
+      - private-network
+
+  auth:
+    build:
+      context: ./auth-msv
+    container_name: auth
+    env_file:
+      - ./auth-msv/.env
+    ports:
+      - "50051:50051"
+    depends_on:
+      - db
+      - auth-memcached
+    networks:
+      - private-network
+
+  order:
+    build:
+      context: ./order-msv
+    container_name: order
+    env_file:
+      - ./order-msv/.env
+    ports:
+      - "50052:50051"
+    depends_on:
+      - db
+    networks:
+      - private-network
+
+  shopcart:
+    build:
+      context: ./shopcart-msv
+    container_name: shopcart
+    env_file:
+      - ./shopcart-msv/.env
+    ports:
+      - "50053:50051"
+    depends_on:
+      - db
+    networks:
+      - private-network
+
+  warehouse:
+    build:
+      context: ./warehouse-msv
+    container_name: warehouse
+    env_file:
+      - ./warehouse-msv/.env
+    ports:
+      - "50054:50051"
+    depends_on:
+      - db
+    networks:
+      - private-network
+
+  gateway:
+    build:
+      context: ./gateway-msv
+    container_name: gateway
+    env_file:
+      - ./gateway-msv/.env
+    ports:
+      - "8080:8080"
+    networks:
+      - private-network
+
+  auth-memcached:
+    image: memcached:latest
+    container_name: auth-memcached
+    env_file:
+      - ./auth-msv/.env
+    ports:
+      - "11211:11211"
+    restart: unless-stopped
+    networks:
+      - private-network
+
+networks:
+  private-network:
+    driver: bridge
+
+volumes:
+  db-data:
+    name: db-data

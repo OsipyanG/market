@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+package warehouse;
+
+import "google/protobuf/empty.proto";
+
+option go_package = "github.com/WB-WH-School/nufu/protos/warehouse-msv/v1";
+
+service Catalog {
+  rpc GetCatalog(GetCatalogRequest) returns (GetCatalogResponse);
+}
+
+service Warehouse {
+  rpc ReserveProducts(ReserveProductsRequest) returns (google.protobuf.Empty);
+  rpc FreeReservedProducts(FreeReservedProductsRequest) returns (google.protobuf.Empty);
+  rpc DeleteReservedProducts(DeleteReservedProductsRequest) returns (google.protobuf.Empty);
+  rpc GetProductPrices(GetProductsPricesRequest) returns (GetProductsPricesResponse);
+}
+
+message Product {
+  string product_id = 1;
+  string name = 2;
+  string description = 3;
+  int64 available = 4;
+  int64 quantity = 5;
+  int64 price = 6;
+}
+
+message ProductQuantity {
+  string product_id = 1;
+  int64 quantity = 2;
+}
+
+message ProductPrice {
+  string product_id = 1;
+  int64 price = 2;
+}
+
+message GetCatalogRequest {
+  int32 offset = 1;
+  int32 limit = 2;
+}
+
+message GetCatalogResponse {
+  repeated Product products = 1;
+}
+
+message ReserveProductsRequest {
+  repeated ProductQuantity products = 1;
+}
+
+message FreeReservedProductsRequest {
+  repeated ProductQuantity products = 1;
+}
+
+message DeleteReservedProductsRequest {
+  repeated ProductQuantity products = 1;
+}
+
+message GetProductsPricesRequest {
+  repeated string product_ids = 1;
+}
+
+message GetProductsPricesResponse {
+  repeated ProductPrice products= 1;
+}

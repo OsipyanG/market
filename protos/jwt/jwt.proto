@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "github.com/OsipyanG/market/protos/jwt";
+
+package jwt;
+
+message JWTClaims {
+  string user_id = 1; // UUID
+  int32 access_level = 2;
+}

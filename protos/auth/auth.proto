@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+import "jwt/jwt.proto";
+
+option go_package = "github.com/OsipyanG/market/protos/auth";
+
+package auth;
+
+service Auth {
+  rpc NewUser(UserCredentials) returns (Tokens);
+  rpc Login(UserCredentials) returns (Tokens);
+  rpc UpdateTokens(RefreshToken) returns (Tokens);
+  rpc UpdatePassword(RequestUpdatePassword) returns (google.protobuf.Empty);
+  rpc Logout(RefreshToken) returns (google.protobuf.Empty);
+  rpc GetJWTClaims(AccessToken) returns (jwt.JWTClaims);
+}
+
+service AuthAdmin {
+  rpc DeleteUser(RequestByUserID) returns (google.protobuf.Empty);
+  rpc SetAccessLevel(SetAccessLevelRequest) returns (google.protobuf.Empty);
+  rpc GetAllUsersWithLevel(RequestByLevel) returns (UsersInfoResponse);
+}
+
+message UserCredentials {
+  string login = 1;
+  string password = 2;
+}
+
+message Tokens {
+  string access_token = 1;
+  string refresh_token = 2;
+}
+
+message RefreshToken {
+  string value = 1;
+}
+
+message AccessToken {
+  string value = 1;
+}
+
+message RequestUpdatePassword {
+  jwt.JWTClaims jwt_claims = 1;
+  string old_password = 2;
+  string new_password = 3;
+}
+
+message RequestByUserID {
+  jwt.JWTClaims jwt_claims = 1;
+  string user_id = 2; // UUID
+}
+
+message SetAccessLevelRequest {
+  jwt.JWTClaims jwt_claims = 1;
+  string user_id = 2; // UUID
+  uint32 lvl = 3;
+}
+
+message User {
+  string id = 1; // UUID
+  string login = 2;
+  uint32 access_level = 3;
+}
+
+message UsersInfoResponse {
+  repeated User users = 1;
+}
+
+message RequestByLevel {
+  jwt.JWTClaims jwt_claims = 1;
+  uint32 lvl = 2;
+}

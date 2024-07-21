@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+import "jwt/jwt.proto";
+
+option go_package = "github.com/OsipyanG/market/protos/shopcart";
+
+package usershopcart;
+
+service UserShopcart {
+  rpc AddProduct(RequestByIDWithProduct) returns (google.protobuf.Empty);
+  rpc DeleteProduct(RequestByIDWithProduct) returns (google.protobuf.Empty);
+  rpc GetProducts(RequestByID) returns (GetProductsResponse);
+  rpc Clear(RequestByID) returns (google.protobuf.Empty);
+}
+
+message Product {
+  string id = 1; // UUID
+  uint64 quantity = 2;
+}
+
+message RequestByID {
+  jwt.JWTClaims jwt_claims = 1;
+}
+
+message RequestByIDWithProduct {
+  Product product = 1;
+  jwt.JWTClaims jwt_claims = 2;
+}
+
+message GetProductsResponse {
+  repeated Product products = 1;
+}
+    

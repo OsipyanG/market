@@ -1,0 +1,14 @@
+linters:
+  enable-all: true
+  disable:
+    - depguard
+    - godox
+    - exhaustruct
+    - varnamelen
+linters-settings:
+  tagliatelle:
+    case:
+      rules:
+        env: upperSnake
+run:
+  timeout: 1m
