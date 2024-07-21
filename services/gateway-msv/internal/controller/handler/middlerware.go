@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strings"
 
-	auth "github.com/OsipyanG/market/protos/auth"
+	"github.com/OsipyanG/market/protos/auth"
 	"github.com/gin-gonic/gin"
 )
 

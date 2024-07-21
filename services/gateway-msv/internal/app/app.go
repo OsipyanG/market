@@ -9,9 +9,9 @@ import (
 	"os/signal"
 	"syscall"
 
-	auth "github.com/OsipyanG/market/protos/auth"
-	order "github.com/OsipyanG/market/protos/order"
-	shopcart "github.com/OsipyanG/market/protos/shopcart"
+	"github.com/OsipyanG/market/protos/auth"
+	"github.com/OsipyanG/market/protos/order"
+	"github.com/OsipyanG/market/protos/shopcart"
 	catalog "github.com/OsipyanG/market/protos/warehouse"
 	"github.com/OsipyanG/market/services/gateway-msv/config"
 	"github.com/OsipyanG/market/services/gateway-msv/internal/controller/handler"

@@ -21,10 +21,10 @@ type RefreshTokenCache struct {
 	client *memcache.Client
 }
 
-func New(memcacheConf *config.MemcachedConfig, refreshConf *config.RefreshTokenConfig) (*RefreshTokenCache, error) {
+func New(memcachedConf *config.MemcachedConfig, refreshConf *config.RefreshTokenConfig) (*RefreshTokenCache, error) {
 	refreshCache := &RefreshTokenCache{
 		config: refreshConf,
-		client: memcache.New(net.JoinHostPort(memcacheConf.Host, memcacheConf.Port)),
+		client: memcache.New(net.JoinHostPort(memcachedConf.Host, memcachedConf.Port)),
 	}
 
 	if err := refreshCache.client.Ping(); err != nil {

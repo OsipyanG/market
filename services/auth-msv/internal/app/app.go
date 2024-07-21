@@ -30,7 +30,7 @@ func Run(conf *config.Config) {
 	}
 	defer storage.Close()
 
-	refreshTokensCache, err := memcached.New(&conf.Memcache, &conf.Refresh)
+	refreshTokensCache, err := memcached.New(&conf.Memcached, &conf.Refresh)
 	if err != nil {
 		slog.Error("error while connecting to memcached: ", "err", err)
 

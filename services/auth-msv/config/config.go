@@ -14,7 +14,7 @@ const (
 type Config struct {
 	Storage    PostgresConfig
 	GRPCServer GRPCServerConfig
-	Memcache   MemcachedConfig
+	Memcached  MemcachedConfig
 	Access     AccessTokenConfig
 	Refresh    RefreshTokenConfig
 	Security   SecurityConfig

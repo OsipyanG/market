@@ -37,7 +37,7 @@ func NewOrderController(s OrderService) *OrderController {
 // FIXME: добавить логирование.
 // FIXME: добавить валидацию всех входных данных.
 // FIXME: добавить правильную обработку ошибок бизнес логики.
-// FIXME: выкидывать ошибку Internal толкьо в случае незапланированных ошибок.
+// FIXME: выкидывать ошибку Internal только в случае незапланированных ошибок.
 // FIXME: удалить JwtClaims модель из бизнес логики, т.к. она используется только в одном месте, в данном случае легче просто добавить параметр в функцию.
 func (or *OrderController) CreateOrder(ctx context.Context, req *orderpb.CreateOrderRequest) (*orderpb.CreateOrderResponse, error) {
 	customerID, err := uuid.Parse(req.GetJwtClaims().GetUserId())

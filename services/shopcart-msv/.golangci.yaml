@@ -5,6 +5,7 @@ linters:
     - exhaustivestruct
     - godox
     - exhaustruct
+    - lll
 linters-settings:
   tagliatelle:
     case:

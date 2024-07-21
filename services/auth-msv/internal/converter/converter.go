@@ -1,8 +1,8 @@
 package converter
 
 import (
-	auth "github.com/OsipyanG/market/protos/auth"
-	jwt "github.com/OsipyanG/market/protos/jwt"
+	"github.com/OsipyanG/market/protos/auth"
+	"github.com/OsipyanG/market/protos/jwt"
 	"github.com/OsipyanG/market/services/auth-msv/internal/model"
 )
 

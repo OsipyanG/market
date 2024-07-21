@@ -29,14 +29,20 @@ func New(storage storage.ShopCartStorage) *ShopCartService {
 
 func (s *ShopCartService) AddProduct(ctx context.Context, userID uuid.UUID, product *model.Product) error {
 	err := s.storage.AddProduct(ctx, userID, product)
+	if err != nil {
+		return errwrap.Wrap(ErrAddProduct, err)
+	}
 
-	return errwrap.WrapIfErr(ErrAddProduct, err)
+	return nil
 }
 
 func (s *ShopCartService) DeleteProduct(ctx context.Context, userID uuid.UUID, product *model.Product) error {
 	err := s.storage.DeleteProduct(ctx, userID, product)
+	if err != nil {
+		return errwrap.Wrap(ErrAddProduct, err)
+	}
 
-	return errwrap.WrapIfErr(ErrDeleteProduct, err)
+	return nil
 }
 
 func (s *ShopCartService) GetProducts(ctx context.Context, userID uuid.UUID) ([]*model.Product, error) {
@@ -50,6 +56,9 @@ func (s *ShopCartService) GetProducts(ctx context.Context, userID uuid.UUID) ([]
 
 func (s *ShopCartService) Clear(ctx context.Context, userID uuid.UUID) error {
 	err := s.storage.Clear(ctx, userID)
+	if err != nil {
+		return errwrap.Wrap(ErrGetProducts, err)
+	}
 
-	return errwrap.WrapIfErr(ErrClear, err)
+	return nil
 }

@@ -3,7 +3,7 @@ package converter
 import (
 	orderpb "github.com/OsipyanG/market/protos/order"
 	"github.com/OsipyanG/market/services/order-msv/internal/model"
-	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
+	"google.golang.org/protobuf/types/known/timestamppb"
 )
 
 func GetProtoOrder(modelOrder *model.Order) *orderpb.Order {

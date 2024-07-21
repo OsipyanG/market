@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	jwt "github.com/OsipyanG/market/protos/jwt"
-	shopcart "github.com/OsipyanG/market/protos/shopcart"
+	"github.com/OsipyanG/market/protos/jwt"
+	"github.com/OsipyanG/market/protos/shopcart"
 	"github.com/OsipyanG/market/services/shopcart-msv/internal/converter"
 	"github.com/OsipyanG/market/services/shopcart-msv/internal/model"
 	"github.com/OsipyanG/market/services/shopcart-msv/pkg/errwrap"
@@ -16,7 +16,7 @@ import (
 var (
 	ErrAddProduct    = errors.New("controller: can't add product")
 	ErrDeleteProduct = errors.New("controller: can't delete product")
-	ErrGetProducts   = errors.New("controller: cant't get products")
+	ErrGetProducts   = errors.New("controller: can't get products")
 	ErrClear         = errors.New("controller: can't clear shopcart")
 
 	ErrNoJWTClaims   = errors.New("no jwt claims")

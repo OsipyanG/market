@@ -16,13 +16,13 @@ func ConvertToModelProduct(protoProduct *proto.Product) (*model.Product, error) 
 		return nil, ErrCantConvertToModel
 	}
 
-	id, err := uuid.Parse(protoProduct.GetId())
+	productID, err := uuid.Parse(protoProduct.GetId())
 	if err != nil {
 		return nil, errwrap.Wrap(ErrCantConvertToModel, err)
 	}
 
 	return &model.Product{
-		ID:       id,
+		ID:       productID,
 		Quantity: int(protoProduct.GetQuantity()),
 	}, nil
 }

@@ -7,7 +7,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	shopcart "github.com/OsipyanG/market/protos/shopcart"
+	"github.com/OsipyanG/market/protos/shopcart"
 	"github.com/OsipyanG/market/services/shopcart-msv/config"
 	"github.com/OsipyanG/market/services/shopcart-msv/internal/controller"
 	"github.com/OsipyanG/market/services/shopcart-msv/internal/service"

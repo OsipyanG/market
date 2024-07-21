@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	auth "github.com/OsipyanG/market/protos/auth"
-	jwt "github.com/OsipyanG/market/protos/jwt"
+	"github.com/OsipyanG/market/protos/auth"
+	"github.com/OsipyanG/market/protos/jwt"
 	"github.com/OsipyanG/market/services/auth-msv/internal/controller"
 	"github.com/OsipyanG/market/services/auth-msv/internal/converter"
 	"github.com/OsipyanG/market/services/auth-msv/internal/model"

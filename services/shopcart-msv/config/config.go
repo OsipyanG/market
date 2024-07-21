@@ -11,12 +11,12 @@ const (
 )
 
 type Config struct {
-	Storage    PostgresConfig
-	GRPCServer GRPCServerConfig
-	Logger     LoggerConfig
+	Storage    Postgres
+	GRPCServer GRPCServer
+	Logger     Logger
 }
 
-type PostgresConfig struct {
+type Postgres struct {
 	User     string `env:"POSTGRES_USER"     env-required:"true"`
 	Password string `env:"POSTGRES_PASSWORD" env-required:"true"`
 	DB       string `env:"POSTGRES_DB"       env-required:"true"`
@@ -25,12 +25,12 @@ type PostgresConfig struct {
 	SSLMode  string `env:"POSTGRES_SSL_MODE" env-required:"true"`
 }
 
-type GRPCServerConfig struct {
+type GRPCServer struct {
 	Host string `env:"GRPC_HOST" env-required:"true"`
 	Port string `env:"GRPC_PORT" env-required:"true"`
 }
 
-type LoggerConfig struct {
+type Logger struct {
 	Level string `default:"info" env:"LOG_LEVEL"`
 }
 

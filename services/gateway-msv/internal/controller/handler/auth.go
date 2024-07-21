@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/http"
 
-	auth "github.com/OsipyanG/market/protos/auth"
-	jwt "github.com/OsipyanG/market/protos/jwt"
+	"github.com/OsipyanG/market/protos/auth"
+	"github.com/OsipyanG/market/protos/jwt"
 	"github.com/gin-gonic/gin"
 )
 

@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/http"
 
-	jwt "github.com/OsipyanG/market/protos/jwt"
-	order "github.com/OsipyanG/market/protos/order"
+	"github.com/OsipyanG/market/protos/jwt"
+	"github.com/OsipyanG/market/protos/order"
 	"github.com/gin-gonic/gin"
 )
 
@@ -29,14 +29,14 @@ func (h *OrderHandler) CreateOrder(c *gin.Context) {
 	claims := c.MustGet("claims")
 	createOrderRequest.JwtClaims = claims.(*jwt.JWTClaims)
 
-	order, err := h.client.CreateOrder(context.TODO(), createOrderRequest)
+	newOrder, err := h.client.CreateOrder(context.TODO(), createOrderRequest)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 
 		return
 	}
 
-	c.JSON(http.StatusOK, order)
+	c.JSON(http.StatusOK, newOrder)
 }
 
 func (h *OrderHandler) GetOrder(c *gin.Context) {
@@ -53,14 +53,14 @@ func (h *OrderHandler) GetOrder(c *gin.Context) {
 	getOrderRequest.JwtClaims = claims.(*jwt.JWTClaims)
 	getOrderRequest.OrderId = orderID
 
-	order, err := h.client.GetOrder(context.TODO(), getOrderRequest)
+	orderResponse, err := h.client.GetOrder(context.TODO(), getOrderRequest)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 
 		return
 	}
 
-	c.JSON(http.StatusOK, order)
+	c.JSON(http.StatusOK, orderResponse)
 }
 
 func (h *OrderHandler) GetOrders(c *gin.Context) {

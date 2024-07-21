@@ -19,5 +19,5 @@ func (lvl AccessLevel) String() string {
 		return ""
 	}
 
-	return []string{"Undefined", "Admin", "WarehouseWorker", "Coutier", "Buyer"}[lvl]
+	return []string{"Undefined", "Admin", "WarehouseWorker", "Courier", "Buyer"}[lvl]
 }

@@ -9,7 +9,7 @@ import (
 	"github.com/google/uuid"
 )
 
-func (s *ShopCartStorage) AddProduct(ctx context.Context, userID uuid.UUID, product *model.Product) error {
+func (s *Storage) AddProduct(ctx context.Context, userID uuid.UUID, product *model.Product) error {
 	_, err := s.pool.Exec(ctx, "CALL add_product($1, $2, $3)", userID, product.ID, product.Quantity)
 	if err != nil {
 		return errwrap.Wrap(storage.ErrAddProduct, err)
@@ -18,7 +18,7 @@ func (s *ShopCartStorage) AddProduct(ctx context.Context, userID uuid.UUID, prod
 	return nil
 }
 
-func (s *ShopCartStorage) DeleteProduct(ctx context.Context, userID uuid.UUID, product *model.Product) error {
+func (s *Storage) DeleteProduct(ctx context.Context, userID uuid.UUID, product *model.Product) error {
 	var rowsAffected int
 
 	err := s.pool.QueryRow(ctx, "SELECT delete_product($1, $2, $3)", userID,
@@ -34,7 +34,7 @@ func (s *ShopCartStorage) DeleteProduct(ctx context.Context, userID uuid.UUID, p
 	return nil
 }
 
-func (s *ShopCartStorage) GetProducts(ctx context.Context, userID uuid.UUID) ([]*model.Product, error) {
+func (s *Storage) GetProducts(ctx context.Context, userID uuid.UUID) ([]*model.Product, error) {
 	rows, err := s.pool.Query(ctx, "SELECT product_id, quantity FROM Products WHERE user_id=$1", userID)
 	if err != nil {
 		return nil, errwrap.Wrap(storage.ErrGetProducts, err)
@@ -61,7 +61,7 @@ func (s *ShopCartStorage) GetProducts(ctx context.Context, userID uuid.UUID) ([]
 	return products, nil
 }
 
-func (s *ShopCartStorage) Clear(ctx context.Context, userID uuid.UUID) error {
+func (s *Storage) Clear(ctx context.Context, userID uuid.UUID) error {
 	cmdTag, err := s.pool.Exec(ctx, "DELETE FROM Products WHERE user_id=$1", userID)
 	if err != nil {
 		return errwrap.Wrap(storage.ErrClear, err)
