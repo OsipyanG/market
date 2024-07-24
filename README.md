@@ -19,9 +19,9 @@ Technologies used:
 2. [auth](/services/auth-msv/README.md) - the authentication and authorization service
 3. [shopcart](/services/shopcart-msv/README.md) - the service responsible for the user's shopping cart
 4. [order](/services/order-msv/README.md) - the order service that handles the lifecycle of an order
-5. [warehourse](/services/warehouse-msv/README.md) - the warehouse service that stores information about goods
+5. [warehouse](/services/warehouse-msv/README.md) - the warehouse service that stores information about goods
 
-![Architucture of project](images/arch.jpg)
+![Architecture of project](images/arch.jpg)
 
 ---
 
@@ -52,7 +52,7 @@ This is an example of how you may give instructions on setting up your project l
 
 3. Go to the directory `services`
 
-   **Before proceeding to the next step, make sure that you have Dokker and Docker compose installed**
+   **Before proceeding to the next step, make sure that you have Docker and Docker compose installed**
 
 4. Build and run the project using `make`.
 
