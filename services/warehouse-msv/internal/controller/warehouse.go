@@ -133,12 +133,12 @@ func (c *WarehouseController) GetProductPrices(ctx context.Context, req *warehou
 	ids := make([]uuid.UUID, 0, len(productIDs))
 
 	for _, id := range productIDs {
-		uuid, err := uuid.Parse(id)
+		ProductUUID, err := uuid.Parse(id)
 		if err != nil {
 			return nil, status.Errorf(codes.InvalidArgument, err.Error())
 		}
 
-		ids = append(ids, uuid)
+		ids = append(ids, ProductUUID)
 	}
 
 	prices, err := c.service.GetProductPrices(ctx, ids)
