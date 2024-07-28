@@ -2,19 +2,17 @@ package handler
 
 import "github.com/gin-gonic/gin"
 
-func SetupRouter(router *gin.Engine, shopcart *ShopcartHandler,
-	order *OrderHandler, catalog *CatalogHandler, auth *AuthHandler,
-) {
-	v1 := router.Group("")
+func SetupRouter(router *gin.Engine, shopcart *ShopcartHandler, order *OrderHandler, catalog *CatalogHandler, auth *AuthHandler) {
+	api := router.Group("api")
 	{
-		v1.POST("/auth/register", auth.NewUser)
-		v1.POST("/auth/login", auth.Login)
-		v1.POST("/auth/refresh", auth.UpdateTokens)
-		v1.POST("/auth/logout", auth.Logout)
+		api.POST("/auth/register", auth.NewUser)
+		api.POST("/auth/login", auth.Login)
+		api.POST("/auth/refresh", auth.UpdateTokens)
+		api.POST("/auth/logout", auth.Logout)
 
-		v1.GET("/catalog", catalog.GetCatalog)
+		api.GET("/catalog", catalog.GetCatalog)
 
-		authorized := v1.Group("/")
+		authorized := api.Group("/")
 		authorized.Use(AuthMiddleware(auth.authClient))
 		{
 			authorized.PATCH("/auth/password", auth.UpdatePassword)
